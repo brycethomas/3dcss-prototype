@@ -26,9 +26,9 @@ const App = () => {
         }}
       >
         <color args={[0x808080]} attach={"background"}></color>
-        <PerspectiveCamera makeDefault position={[0, 1.6, 0.5]} fov={75} />
+        <PerspectiveCamera makeDefault position={[0, 1.6, 0.55]} fov={75} />
         <Environment preset="warehouse" />
-        <object3D position={[0, 1, -0.5]}>
+        <object3D position={[0, 1, -1.5]}>
           <Root
             pixelSize={0.002}
             anchorY="bottom"

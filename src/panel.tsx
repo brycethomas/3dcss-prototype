@@ -1,90 +1,59 @@
 import { Button, Card, CardContent } from "@react-three/uikit-default";
 import { Container, DefaultProperties, Image, Text } from "@react-three/uikit";
 
-import { useState } from "react";
-
 export function PanelUI() {
-  const [hovered, setHovered] = useState(false);
   return (
-    <Container
-      alignItems="center"
-      width="100%"
-      justifyContent="center"
-      flexDirection="column"
-    >
-      <Card
-        width="100%"
-        borderWidth={8}
-        borderColor="rgb(2,8,23)"
-        borderBend={0.5}
-        maxWidth={448}
-        borderRadius={8}
-      >
-        <Container overflow="hidden" flexDirection="row">
-          <Image
-            height="100%"
-            src="assets/3dcss.jpeg"
-            width="100%"
-            aspectRatio={1.3333333333333333}
-            borderRadius={8}
-            objectFit="cover"
-            flexDirection="column"
-          ></Image>
+    <Container backgroundColor="rgb(41,41,41)" width={1000} height="50%"
+      flexDirection="column" justifyContent="space-between" borderTopRadius={8}>
+      <Container flexDirection="row" justifyContent="space-between" padding={8}>
+        <Text color="rgba(255, 255, 255, 0.7)">...</Text>
+        <Text color="rgba(255, 255, 255, 0.7)">Browser</Text>
+        <Text color="rgba(255, 255, 255, 0.7)">_ X</Text>
+      </Container>
+      <Container flexDirection="row">
+        <Container flexDirection="row" backgroundColor="rgba(100, 100, 100)" borderTopRadius={8} padding={8}>
+          <Image src="assets/globe.png"/>
+          <Text color="rgba(255, 255, 255, 0.7)" padding={8}>My cool site</Text>
+          <Image src="assets/cross.webp" hover={{ transformTranslateZ: 10 }}/>
         </Container>
-        <CardContent md={{ padding: 32 }} paddingTop={24}>
-          <Container flexDirection="column" gapRow={16}>
-            <Text
-              fontSize={24}
-              fontWeight={700}
-              lineHeight={32}
-              flexDirection="column"
-              transformTranslateZ={10}
-            >
-              3D CSS
-            </Text>
-            <Text
-              color="rgb(107,114,128)"
-              dark={{ color: "rgb(156,163,175)" }}
-              flexDirection="column"
-              transformTranslateZ={15}
-            >
-              3D CSS enables creation of three-dimensional effects and
-              transformations on web elements, allowing them to be rotated,
-              scaled, and positioned in 3D space.
-            </Text>
-            <Container
-              display="flex"
-              alignItems="center"
-              justifyContent="space-between"
-              transformTranslateZ={hovered ? 10 : 0}
-            >
-              <Button
-                onPointerEnter={() => {
-                  setHovered(true);
-                }}
-                onPointerLeave={() => {
-                  setHovered(false);
-                }}
-              >
-                <Text transformTranslateZ={hovered ? 10 : 0}>Learn More</Text>
-              </Button>
-              <DefaultProperties color="rgb(107,114,128)">
-                <Container
-                  dark={{ color: "rgb(156,163,175)" }}
-                  display="flex"
-                  alignItems="center"
-                  flexDirection="row"
-                  gapColumn={8}
-                >
-                  <Text fontSize={14} lineHeight={20} flexDirection="column">
-                    February 8, 2025
-                  </Text>
-                </Container>
-              </DefaultProperties>
-            </Container>
-          </Container>
-        </CardContent>
-      </Card>
+        <Image src="assets/plus.webp" hover={{ transformTranslateZ: 10 }}/>
+      </Container>
+      <Container backgroundColor="rgb(255,255,255)" padding={8} height={500} flexDirection="column">
+        <Container flexDirection="row" alignItems="flex-start">
+          <Text>The quick brown fox jumped over the--</Text>
+          <Text color="rgb(0,0,255)" hover={{ transformTranslateZ: 10 }}>Pop 10 hyperlink</Text>
+          <Text>.</Text>
+        </Container>
+        <Container flexDirection="row" alignItems="flex-start">
+          <Text>The quick brown fox jumped over the--</Text>
+          <Text color="rgb(0,0,255)" hover={{ transformTranslateZ: 30 }}>Pop 30 hyperlink</Text>
+          <Text>.</Text>
+        </Container>
+        <Container flexDirection="row" alignItems="flex-start">
+          <Text>The quick brown fox jumped over the--</Text>
+          <Text color="rgb(0,0,255)" hover={{ transformTranslateZ: 30 }}>Pop 50 hyperlink</Text>
+          <Text>.</Text>
+        </Container>
+        <Container padding={12} flexDirection="row" height="50%" gap={8}>
+          <Image src="assets/billy_openai.webp" hover={{ transformTranslateZ: 10 }}/>
+          <Image src="assets/happy_openai.webp" hover={{ transformTranslateZ: 30 }}/>
+          <Image src="assets/nicky_openai.webp" hover={{ transformTranslateZ: 50 }}/>
+        </Container>
+        <Container gap={8} paddingY={10}>
+          <Button backgroundColor="red"><Text hover={{ transformTranslateZ: 10 }}>Pop 10</Text></Button>
+          <Button backgroundColor="red"><Text hover={{ transformTranslateZ: 20 }}>Pop 20</Text></Button>
+          <Button backgroundColor="red"><Text hover={{ transformTranslateZ: 30 }}>Pop 30</Text></Button>
+          <Button backgroundColor="red"><Text hover={{ transformTranslateZ: 40 }}>Pop 40</Text></Button>
+          <Button backgroundColor="red"><Text hover={{ transformTranslateZ: 50 }}>Pop 50</Text></Button>
+        </Container>
+        <Container gap={8}>
+          <Button backgroundColor="blue" hover={{ transformTranslateZ: 10 }}><Text>Pop 10</Text></Button>
+          <Button backgroundColor="blue" hover={{ transformTranslateZ: 20 }}><Text>Pop 20</Text></Button>
+          <Button backgroundColor="blue" hover={{ transformTranslateZ: 30 }}><Text>Pop 30</Text></Button>
+          <Button backgroundColor="blue" hover={{ transformTranslateZ: 40 }}><Text>Pop 40</Text></Button>
+          <Button backgroundColor="blue" hover={{ transformTranslateZ: 50 }}><Text>Pop 50</Text></Button>
+        </Container>
+      </Container>
     </Container>
   );
 }

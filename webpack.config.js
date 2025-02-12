@@ -25,7 +25,7 @@ module.exports = {
       directory: path.join(__dirname, "dist"),
     },
     host: "0.0.0.0",
-    server: "https",
+    server: "http",
     compress: true,
     port: 8081,
     client: {
